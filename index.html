@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo Interactivo</title>
+    <link rel="icon" href="https://i.imgur.com/VoEIN3f.jpeg" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f8f8f8;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: rgba(255, 240, 245, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 4.05em; /* Aumentado en un 35% */
+        }
+        h2 {
+            color: #ff1493;
+            font-size: 2.7em; /* Aumentado en un 35% */
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.62em; /* Aumentado en un 35% */
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .gallery {
+            display: none;
+            margin-top: 20px;
+            position: relative;
+        }
+        .gallery img {
+            width: 300px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+        .gallery.show img {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .spacer {
+            height: 2em;
+        }
+        .caption {
+            font-size: 1.62em; /* Aumentado en un 35% */
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .final-message {
+            font-size: 1.62em; /* Aumentado en un 35% */
+            color: #333;
+            margin-top: 40px;
+            background-color: rgba(255, 240, 245, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .heart {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: url('https://image.flaticon.com/icons/svg/833/833472.svg') no-repeat center center;
+            background-size: contain;
+            opacity: 0.6;
+        }
+        .heart:nth-child(1) { top: 20%; left: 15%; }
+        .heart:nth-child(2) { top: 30%; left: 70%; }
+        .heart:nth-child(3) { top: 50%; left: 40%; }
+        .heart:nth-child(4) { top: 70%; left: 20%; }
+        .heart:nth-child(5) { top: 80%; left: 80%; }
+        .background-image {
+            margin: 20px 0;
+        }
+        .background-image img {
+            width: 200px; /* Ajusta el tamaño aquí */
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hola mi niña hermosa :D</h1>
+        <h2>Te hice este regalito en modo de aprecio miamor</h2>
+      
+        <button onclick="toggleSurprise()">Mostrar/Ocultar Sorpresa</button>
+        <div class="background-image">
+        
+            <img src="https://previews.123rf.com/images/sonsedskaya/sonsedskaya1703/sonsedskaya170300024/75136799-gato-escoc%C3%A9s-recto-con-una-rosa-en-la-boca-aislado-sobre-fondo-blanco.jpg" alt="Gato con rosa" id="cat-image">
+          
+        </div>
+        <audio id="background-music" src=https://www.youtube.com/watch?reload=9&v=_QGIzmtIr3E loop></audio>
+        <div id="message" class="gallery">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            
+            <h3>A continuacion unas fotitos de mi bella hermosa y preciosa noviecita</h3>
+            
+            <img src="https://i.imgur.com/VoEIN3f.jpeg" alt="Imagen 1">
+            <div class="caption">Tu sonrisa toda tierna y hermosa 😿❤️</div>
+            <div class="spacer"></div>
+            
+            <img src="https://i.imgur.com/7RnzF1J.jpeg" alt="Imagen 2">
+            <div class="caption">Con una corona como la princesa que eres mi niña guapa❤️ (Toda una diosa diosmio)</div>
+            <div class="spacer"></div>
+            
+            <img src="https://i.imgur.com/qqjMqQ5.jpeg" alt="Imagen 3">
+            <div class="caption">Mis amiguitas robando cámara jejejeje (Bien preciosa tú también miamor)</div>
+            <div class="spacer"></div>
+            
+            <img src="https://i.imgur.com/pS4BmQw.jpeg" alt="Imagen 4">
+            <div class="caption">AAAAA DIOS MÍO Q P-E-R-F-E-C-T-A🛐🛐🛐🛐</div>
+            <div class="spacer"></div>
+            
+            <img src="https://i.imgur.com/74HDK6z.jpeg" alt="Imagen 5">
+            <div class="caption">Mi novia esa 😻😻</div>
+            <div class="spacer"></div>
+            
+            <img src="https://i.imgur.com/048qAJa.jpeg" alt="Imagen 6">
+            <div class="caption">Dios mío miamorr te ves toda perfecta en esta foto 😻</div>
+            <div class="spacer"></div>
+            
+            <img src="https://i.imgur.com/f0ca7mn.jpeg" alt="Imagen 7">
+            <div class="caption">La primera foto que me enviaste y mi favorita 😿es que te ves tan linda y hermosa con ese vestido q 🛐🛐🛐🛐🛐te ves perfecta mi amor❤️(Aunq te verias mejor sin el y arriba de mi)</div>
+            <div class="spacer"></div>
+
+            <div class="final-message">
+                Mi niña, me tomé el tiempo de hacerte esta página en un modo de mostrar la admiración que te tengo, te adoro, gracias por llegar a mi vida y voy a seguir haciendo todo lo posible para hacerte feliz mi niña, te amo, me encantas y eres la mujer que siempre quise y soy muy afortunado de tenerte. Fuera de eso gracias amor, gracias por siempre estar ahí para mí, gracias por darme tu apoyo, eres la persona a la cual no quiero dejar ir nunca, te mereces el mundo entero, te admiro muchísimo mi vida, eres maravillosa e inigualable, nadie se compara a tu belleza y tan hermoso ser que eres, nunca en mi vida pensé q iba a sonar tan cringe, pero TÚ me haces feliz y espero haber sido un muy buen novio para ti, que estés contenta conmigo y te esté dando la atención y el amor que toda mujer desea, ojalá les de hpta envidia de que sus novios no las traten como yo te trato a ti mi princesa guapa, eres muy especial para mí, te adoro mi amor siempre voy a estar para ti, y cuando estés triste aquí tienes tu hombro pá llorar y desahogarte q conmigo estás a salvo de todo amor, siempre voy a cuidar y a proteger tus sentimientos y tu corazoncito❤️💞 estas palabras te las dedico con todo el cariño del mundo 🫶🏻
+            </div>
+            <div class="spacer"></div>
+
+            <img src="https://i.imgur.com/FAo3TFO.png" alt="Imagen 8">
+            <div class="spacer"></div>
+            <img src="https://i.imgur.com/J1PvxVt.png" alt="Imagen 9">
+            <div class="spacer"></div>
+            <img src="https://i.imgur.com/C0XKMFk.jpeg" alt="Imagen 10">
+            <div class="spacer"></div>
+            <img src="https://i.imgur.com/M4Pw1VW.jpeg" alt="Imagen 11">
+        </div>
+    </div>
+
+    <script>
+        function toggleSurprise() {
+            var gallery = document.getElementById('message');
+            var catImage = document.getElementById('cat-image');
+            var music = document.getElementById('background-music');
+            if (gallery.style.display === 'block') {
+                gallery.style.display = 'none';
+                catImage.style.display = 'block';
+                music.pause();
+                music.currentTime = 0;
+            } else {
+                gallery.style.display = 'block';
+                catImage.style.display = 'none';
+                music.play();
+                document.querySelector('.gallery').classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
